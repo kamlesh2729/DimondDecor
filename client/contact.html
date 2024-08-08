@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimond Decor | Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwindcss.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<nav class=" w-screen lp:max-w-9x0 4k:max-w-81x h-nav bg-yellow-300 flex justify-between items-center mx-auto px-2" data-nav>
+    <div>
+    <a href="./index.html" class="flex pointer">
+    <i class="fa-solid fa-gem fa-xl" style="color: #f8ab54;"></i>
+    <h2>Gems</h2>
+    </a>
+    </div>
+    <div data-menu>
+    <ul class="flex gap-8">
+        <li class=" px-3"><a href="./index.html" class=" font-medium relative duration-300 hover:text-white after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Home</a></li>
+        <li class=" px-3"><a href="./about.html" class=" font-medium relative duration-300 hover:text-white after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">About us</a></li>
+        <li class=" px-3"><a href="./products.html" class=" font-medium relative duration-300 hover:text-white after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Products</a></li>
+        <li class=" px-3"><a href="./contact.html" class=" font-medium text-white relative after:content-[''] after:absolute after:w-[60%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200">Contact</a></li>
+    </ul>
+    </div>
+    <div>
+    <button>cart</button>
+    <button>
+    Log In
+    </button>
+    </div>
+    </nav>
+
+    <section class=" bg-gray-50 py-40 px-0 text-black">
+        <main class="my-0 mx-auto max-w-8lx lg:max-w-[90%] py-0 px-12 lg:px-16">
+          <article class="grid grid-cols-com lg:grid-cols-con2 gap-8 text-text-black">
+            <aside class="flex flex-col md:max-w-full lg:max-w-full text-center md:text-center lg:text-left gap-4 max-w-2xl">
+              <h2 class="text-h2 font-bold leading-snug mb-8">
+                Need additional information?
+              </h2>
+              <p class=" text-p font-text text-text-gray leading-relaxed mb-8">
+                A multifacered professional skilled in multiple fields of
+                research, development as well as a learning specialist, over 15
+                years of exprience.
+              </p>
+              <a
+                href="/"
+                class=" flex items-center justify-center lg:justify-start no-underline text-text-black text-p font-semibold transition-all mb-2 hover:text-text-orange"
+              >
+                <TbPhone class="text-bt" /> &nbsp;&nbsp;&nbsp; +91
+                9988776600
+              </a>
+              <a
+                href="/"
+                class="flex items-center justify-center lg:justify-start no-underline text-text-black text-p font-semibold transition-all mb-2 hover:text-text-orange"
+              >
+                <TbMail class="text-bt" /> &nbsp; HomeGems@gmail.com
+              </a>
+              <a
+                href="/"
+                class="flex items-center justify-center lg:justify-start no-underline text-text-black text-p font-semibold transition-all mb-2 hover:text-text-orange"
+              >
+                <TbLocation class="text-bt" /> &nbsp; India
+              </a>
+            </aside>
+            <div class="flex flex-col">
+              <form class=" flex flex-col">
+                <label htmlFor="Fname" class="text-p font-semibold mb-4">
+                  Full Name <b class=" text-text-orange">*</b>
+                </label>
+                <input
+                  class=" bg-slate-100 py-5 px-7 text-p border outline-none mb-9"
+                  type="text"
+                  name="name"
+                  id="Fname"
+                />
+                <label htmlFor="Email" class="text-p font-semibold mb-4">
+                  Email<b class=" text-text-orange">*</b>
+                </label>
+                <input
+                  class=" bg-slate-100 py-5 px-7 text-p border outline-none mb-9"
+                  type="email"
+                  name="email"
+                  id="Email"
+                />
+                <label htmlFor="msg" class="text-p font-semibold mb-4">
+                  Tell us about it<b class=" text-text-orange">*</b>
+                </label>
+                <textarea
+                  class="bg-slate-100 h-52 py-5 px-7 text-p border outline-none mb-10"
+                  name="msg"
+                  id="Mesg"
+                  placeholder="Write Here.."
+                ></textarea>
+
+                <button
+                  class=" bg-text-orange flex justify-center items-center py-7 px-12 rounded-md shadow-3xt transition-all border border-solid border-text-orange text-white text-bt font-semibold cursor-pointer hover:shadow-3xr hover:bg-text-orange"
+                  type="submit"
+                >
+                  <TbMailOpened class="text-bt" /> &nbsp; Send Message
+                </button>
+              </form>
+            </div>
+          </article>
+        </main>
+    </section>
+</body>
+</html>

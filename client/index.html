@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimond Decor | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwindcss.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+    </header>
+    <nav class=" w-screen lp:max-w-9x0 4k:max-w-81x h-nav bg-white flex justify-between items-center mx-auto px-2" data-nav>
+    <div>
+    <a href="./index.html" class="flex items-center gap-1 pointer">
+    <i class="fa-solid fa-gem fa-2xl" style="color: #f8ab54;"></i>
+    <h2 class="text-blue-300 font-bold text-bt">Decor</h2>
+    </a>
+    </div>
+    <div data-menu>
+    <ul class="flex gap-8">
+        <li class=" px-3"><a href="./index.html" class=" font-medium text-yellow-500 relative after:content-[''] after:absolute after:w-[60%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200">Home</a></li>
+        <li class=" px-3"><a href="./about.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">About us</a></li>
+        <li class=" px-3"><a href="./products.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Products</a></li>
+        <li class=" px-3"><a href="./contact.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Contact</a></li>
+    </ul>
+    </div>
+    <div>
+    <button><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></button>
+    <button>
+    Log In
+    </button>
+    </div>
+    </nav>
+    <!-- img slider  -->
+    <!-- <section class="w-full h-screen bg-red-200">
+      <div class="w-full h-slider">
+          <img src="./assetes/10272160.jpg" alt="slider1" class="imgSlide">
+          <img src="./assetes/banner/banner2.jpg" alt="slider2" class="imgSlide">
+          <img src="./assetes/sale-2.jpg" alt="slider3" class="imgSlide">
+      </div>
+  <div class="text-center">
+  <span class="w-[15px] h-[15px] mx-[2px] bg-[#bbb] rounded "></span> 
+  <span class="w-[15px] h-[15px] mx-[2px] bg-[#bbb] rounded "></span> 
+  <span class="w-[15px] h-[15px] mx-[2px] bg-[#bbb] rounded "></span> 
+</div>
+    </section> -->
+    <!-- hero section  -->
+    <section class="w-screen lp:max-w-9x0 4k:max-w-81x h-screen mx-auto grid grid-cols-con2 lp:grid-cols-hero lpL:grid-rows-hero gap-1 lp:gap-4 gc">
+    <div class="overflow-hidden cursor-pointer relative go">
+    <a href="./products.html">
+    <img src="./assetes/header/home-img-1.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+    <p class="font-bold text-white text-bh2 absolute bottom-4 left-6 z-5">1</p>
+    </a>
+    </div>
+    <div class="overflow-hidden cursor-pointer relative gt">
+      <a href="./products.html">
+    <img src="./assetes/header/home-img-2.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+    <p class="font-bold text-white text-bh2 absolute bottom-4 left-6 z-5">2</p>
+    </a>
+    </div>
+    <div class="overflow-hidden cursor-pointer relative gtu">
+      <a href="./products.html">
+    <img src="./assetes/header/home-img-3.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+    <p class="font-bold text-white text-bh2 absolute bottom-4 left-6 z-5">3</p>
+    </a>
+    </div>
+    <div class="overflow-hidden cursor-pointer relative gtl">
+      <a href="./products.html">
+    <img src="./assetes/header/home-img-4.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition duration-300">
+    <p class="font-bold text-white text-bh2 absolute bottom-4 left-6 z-5">4</p>
+    </a>
+    </div>
+    </section>
+    <!-- trending section  -->
+    <section class="w-screen lp:max-w-9x0 4k:max-w-81x h-screen bg-yellow-200 mx-auto grid grid-cols-com lp:grid-cols-mod lp:grid-rows-proud">
+    <!-- <div class="bg-yellow-200">
+    <img src="..." class="w-pimg h-pimg" alt="product">
+    <div class="w-pinfo h-pinfo bg-orange-200 text-center">
+      <h5 class="font-titles text-bt font-medium">Card title</h5>
+      <p class="font-text text-p font-normal">Some quick example text to build on the card title 
+        and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="bg-yellow-200">
+    <img src="..." class="w-pimg h-pimg" alt="product">
+    <div class="w-pinfo h-pinfo bg-orange-200 text-center">
+      <h5 class="font-titles text-bt font-medium">Card title</h5>
+      <p class="font-text text-p font-normal">Some quick example text to build on the card title 
+        and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="bg-yellow-200">
+    <img src="..." class="w-pimg h-pimg" alt="product">
+    <div class="w-pinfo h-pinfo bg-orange-200 text-center">
+      <h5 class="font-titles text-bt font-medium">Card title</h5>
+      <p class="font-text text-p font-normal">Some quick example text to build on the card title 
+        and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="bg-yellow-200">
+    <img src="..." class="w-pimg h-pimg" alt="product">
+    <div class="w-pinfo h-pinfo bg-orange-200 text-center">
+      <h5 class="font-titles text-bt font-medium">Card title</h5>
+      <p class="font-text text-p font-normal">Some quick example text to build on the card title 
+        and make up the bulk of the card's content.</p>
+    </div>
+  </div> -->
+    </section>
+    <!-- banner section  -->
+    <section></section>
+    <!-- product slider  -->
+    <section class="w-screen lp:max-w-9x0 4k:max-w-81x h-screen bg-purple-200 mx-auto"></section>
+    <!-- testimonal section  -->
+     <section class="w-screen lp:max-w-9x0 4k:max-w-81x h-screen bg-blue-200 mx-auto"></section>
+    <!-- footer section  -->
+     <footer>
+        <section>news latter</section>
+        <section>
+        <div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div>Copy right</div>
+        </section>
+     </footer>
+</body>
+</html>
