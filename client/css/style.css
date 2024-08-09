@@ -12,9 +12,13 @@ html {
     display: none;
     width: 100%;
     height: 100%;
-
 }
-
+.banner{
+    background-image: url(../assetes/banner/banner1.jpg);
+    background-position: center;
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+}
 @media screen and (min-width: 1020px) {
     .gc {
         grid-template-areas: 'one two four' 'one two four-low';

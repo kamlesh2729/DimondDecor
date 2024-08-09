@@ -42,6 +42,7 @@ tailwind.config = {
         pbox: "33vw",
         pimg: "20.3125vw",
         pinfo: "20.3125vw",
+        test: "50vw",
         mbox: "35rem",
         65: "17rem",
         61: "25rem",
@@ -69,6 +70,7 @@ tailwind.config = {
         pbox: "60vh",
         pimg: "30vh",
         pinfo: "30vh",
+        test: "50vh",
         nav: "10vh",
     },
     gridTemplateColumns: {
