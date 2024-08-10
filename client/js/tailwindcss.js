@@ -69,7 +69,7 @@ tailwind.config = {
         slider: "80vh",
         pbox: "60vh",
         pimg: "30vh",
-        pinfo: "30vh",
+        pinfo: "20vh",
         test: "50vh",
         nav: "10vh",
     },
