@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/tailwindcss.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -28,26 +28,97 @@
     </ul>
     </div>
     <div>
+    <a href="./cart.html">
     <button><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></button>
+    </a>
     <button>
     Log In
     </button>
     </div>
     </nav>
+    <!-- about hero  -->
+    <section class="hero">
+    <div><a href="./index.html">Home</a>> About Us</div>
+    </section>
+    <!-- about section1  -->
+    <section>
+    <div>
+    <h2>title head</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi saepe molestias cumque blanditiis quidem ad et, est impedit libero, laboriosam tempore expedita. Quibusdam iusto architecto illum nihil culpa magnam consectetur.
+    Repellendus illo eaque est excepturi perferendis, amet repudiandae laboriosam, reiciendis nulla doloremque fugiat ullam atque consequuntur nostrum saepe adipisci ipsa assumenda maxime ex. Quam nisi, vitae facilis voluptatum officiis dolores.
+    Esse maxime explicabo labore velit impedit totam adipisci laboriosam, blanditiis, mollitia quo eos? Dolor, fuga placeat numquam natus, maxime voluptas saepe tempora explicabo alias similique nisi cumque quia voluptatum repudiandae!
+    Ad, nisi! Nisi ratione quibusdam consequatur ipsum, tenetur non cupiditate at laudantium corporis velit, accusantium sequi, enim ex delectus similique cum pariatur consectetur iste error expedita. A, nostrum. Dolore, aut.
+    Consectetur in, eius officia porro fugiat aliquam sapiente, non iste saepe neque modi rem? Eligendi nisi deleniti voluptas modi reprehenderit possimus magnam perferendis blanditiis. Dignissimos corrupti reprehenderit ratione? Non, hic.</p>
+    </div>
+    <div>
+        <img src="./assetes/banner/banner1.jpg" alt="about">
+    </div>
+    </section>
+    <!-- about section2  -->
+    <section>
+    <div>
+        <img src="./assetes/banner/banner2.jpg" alt="about">
+    </div>
+    <div>
+    <h2>title head</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi saepe molestias cumque blanditiis quidem ad et, est impedit libero, laboriosam tempore expedita. Quibusdam iusto architecto illum nihil culpa magnam consectetur.
+    Repellendus illo eaque est excepturi perferendis, amet repudiandae laboriosam, reiciendis nulla doloremque fugiat ullam atque consequuntur nostrum saepe adipisci ipsa assumenda maxime ex. Quam nisi, vitae facilis voluptatum officiis dolores.
+    Esse maxime explicabo labore velit impedit totam adipisci laboriosam, blanditiis, mollitia quo eos? Dolor, fuga placeat numquam natus, maxime voluptas saepe tempora explicabo alias similique nisi cumque quia voluptatum repudiandae!
+    Ad, nisi! Nisi ratione quibusdam consequatur ipsum, tenetur non cupiditate at laudantium corporis velit, accusantium sequi, enim ex delectus similique cum pariatur consectetur iste error expedita. A, nostrum. Dolore, aut.
+    Consectetur in, eius officia porro fugiat aliquam sapiente, non iste saepe neque modi rem? Eligendi nisi deleniti voluptas modi reprehenderit possimus magnam perferendis blanditiis. Dignissimos corrupti reprehenderit ratione? Non, hic.</p>
+    </div>
+    </section>
 
-    <footer>
-        <section class="h-ho bg-yellow-200">news latter
-        <div><input type="text" name="" id=""><button type="submit">Subscribe</button></div>
+<footer class="newslatter">
+        <section class="h-ho w-full text-center flex flex-col items-center justify-center">
+          <h2 class=" my-3 font-semibold text-bt text-blue-400">News Latter</h2>
+          <div>
+          <input type="email" placeholder="example@gmail.com" name="Email" id="EmailId" class="h-10 font-medium text-str text-titles px-2 rounded bg-blue-100 focus:outline-0">
+          <button type="submit" class="bg-blue-200 font-semibold text-[1.4rem] text-titles text-red-400 mx-2 px-4 py-1 rounded-lg">Subscribe</button>
+          </div>
         </section>
-        <section>
-        <div class="w-full lp:max-w-9x0 4k:max-w-9x0 h-auto lp:h-ho 4k:h-ho mx-auto flex">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+        <section class="py-2 bg-[#f0f0806f]">
+        <div class="w-full lp:max-w-9x0 4k:max-w-9x0 h-auto lp:h-ho 4k:h-ho mx-auto grid grid-cols-com lp:grid-cols-mod 4k:grid-cols-mod py-4">
+            <div class="text-start">
+            <a href="./index.html">
+            <h2 class="text-white font-medium text-bt font-text">DiamondDecor</h2>
+            </a>
+            <p class="font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quia, rem, cumque hic odit nulla cupiditate.</p>
+          <ul class="flex justify-evenly mt-4">
+            <li class="w-10 h-10 text-center rounded-full bg-pink-200 group"><i class="fa-brands fa-facebook-f fa-2xl group-hover:text-blue-500"></i></li>
+            <li class="w-10 h-10 text-center rounded-full bg-pink-200"><i class="fa-brands fa-instagram fa-2xl inst"></i></li>
+            <li class="w-10 h-10 text-center rounded-full bg-pink-200 group"><i class="fa-brands fa-x-twitter fa-2xl group-hover:text-blue-500"></i></li>
+            <li class="w-10 h-10 text-center rounded-full bg-pink-200 group"><i class="fa-brands fa-linkedin-in fa-2xl group-hover:text-blue-500"></i></li>
+          </ul>  
+          </div>
+            <div class="text-start">
+            <h2 class="text-white font-medium text-bt font-text relative after:content-[''] after:absolute after:w-[30%] after:h-1 after:bottom-0 after:left-0 after:bg-blue-200">About</h2>
+            <ul>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">Menu</a></li>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">Features</a></li>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">New & Blogs</a></li>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">Help & Supports</a></li>
+            </ul>
+          </div>
+            <div class="text-start">
+            <h2 class="text-white font-medium text-bt font-text relative after:content-[''] after:absolute after:w-[30%] after:h-1 after:bottom-0 after:left-0 after:bg-blue-200">Company</h2>
+            <ul>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">How to Work</a></li>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">Terms of service</a></li>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">Franchise</a></li>
+              <li class="h-8 my-2"><a href="#" class="relative font-medium duration-300 hover:text-white after:content-[''] after:absolute after:w-[0] after:h-1 after:-bottom-1 after:left-0 after:bg-blue-200 after:duration-300 after:ease-in-out hover:after:w-full">FAQ</a></li>
+            </ul>
+            </div>
+            <div class="text-start">
+            <h2 class="text-white font-medium text-bt font-text relative after:content-[''] after:absolute after:w-[30%] after:h-1 after:bottom-0 after:left-0 after:bg-blue-200">Contact Us</h2>
+            <p class="mt-2 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="mt-2"><a href="#" class=" font-medium duration-300 hover:text-white">+91 9988776644</a></p>
+            <p class="mt-2"><a href="#" class=" font-medium duration-300 hover:text-white">diamonddecore@gmail.com</a></p>
+            <p class="mt-2"><a href="#" class=" font-medium duration-300 hover:text-white">www.diamonddecore.com</a></p>
+            </div>
         </div>
-        <div class="text-center">Copy right</div>
-        </section>
+      </section>
+      <div class="bg-yellow-400 text-p text-center text-white font-semibold">Copy right</div>
     </footer>
 </body>
 </html>
