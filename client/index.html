@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/tailwindcss.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
-    <script type="module" src="./js/main.js" defer></script>
+    <script src="./js/main.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -42,12 +42,12 @@
         <img src="./assetes/banner/banner3.jpg" alt="slider2" class="w-full h-full object-center imgSlide">
         <img src="./assetes/banner/banner2.jpg" alt="slider3" class=" w-full h-full object-center imgSlide">
         <img src="./assetes/banner/banner4.jpg" alt="slider4" class="w-full h-full object-center imgSlide">
-        <button class="text-h4 absolute left-0 z-10"><i class="fa-solid fa-chevron-left" style="color: #FFD43B;"></i></button>
-        <button class="text-h4 absolute right-0 z-10"><i class="fa-solid fa-chevron-right" style="color: #FFD43B;"></i></button>
+        <button class="w-bt h-nav bg-[#ffffff63] text-h3 absolute left-4 z-10 cursor-pointer hover:bg-[#ffffff78]" onclick="preslide(-1)"><i class="fa-solid fa-chevron-left" style="color: #FFD43B;"></i></button>
+        <button class="w-bt h-nav bg-[#ffffff63] text-h3 absolute right-4 z-10 cursor-pointer hover:bg-[#ffffff78]" onclick="nextslide(1)"><i class="fa-solid fa-chevron-right" style="color: #FFD43B;"></i></button>
         <div class="w-test h-[4vh] mb-4 flex items-center justify-center gap-8 absolute z-10 bottom-0">
-          <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded "></span> 
-          <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded "></span> 
-          <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded "></span> 
+          <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded cursor-pointer" onclick="currentslide(1)"></span> 
+          <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded cursor-pointer" onclick="currentslide(2)"></span> 
+          <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded cursor-pointer" onclick="currentslide(3)"></span> 
         </div>
         </div>
     </section>
@@ -286,61 +286,65 @@
         <p class="text-sm font-medium text-gray-900">$35</p>
       </div>
     </div>
-
-      <div class="bg-white">
-      <img src="./assetes/products/2.jpg" class="w-pimg h-pimg" alt="product">
-      <div class="w-pinfo h-pinfo bg-orange-200 text-center">
-        <h5 class="font-titles text-bt font-medium">Card title</h5>
-        <p class="font-text text-p font-normal overflow-x-hidden">Some quick example text to build on the card title 
-          and make up the bulk of the card's content.</p>
+    
+    <div class="bg-yellow-100">
+      <div class=" w-pimg h-[70%]">
+          <img src="./assetes/products/1.jpg" alt="product" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+        </div>
+      <div class="w-pinfo h-pinfo bg-orange-100 text-center">
+        <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Basic Tee
+              </a>
+          </h3>
+        <p class="mt-1 text-sm text-gray-500">Black</p>
+        <p class="text-sm font-medium text-gray-900">$35</p>
       </div>
     </div>
-      <div class="bg-white">
-      <img src="./assetes/products/3.png" class="w-pimg h-pimg" alt="product">
-      <div class="w-pinfo h-pinfo bg-orange-200 text-center">
-        <h5 class="font-titles text-bt font-medium">Card title</h5>
-        <p class="font-text text-p font-normal overflow-x-hidden">Some quick example text to build on the card title 
-          and make up the bulk of the card's content.</p>
+    <div class="bg-yellow-100">
+      <div class=" w-pimg h-[70%]">
+          <img src="./assetes/products/1.jpg" alt="product" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+        </div>
+      <div class="w-pinfo h-pinfo bg-orange-100 text-center">
+        <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Basic Tee
+              </a>
+          </h3>
+        <p class="mt-1 text-sm text-gray-500">Black</p>
+        <p class="text-sm font-medium text-gray-900">$35</p>
       </div>
     </div>
-      <div class="bg-white">
-      <img src="./assetes/products/4.jpg" class="w-pimg h-pimg" alt="product">
-      <div class="w-pinfo h-pinfo bg-orange-200 text-center">
-        <h5 class="font-titles text-bt font-medium">Card title</h5>
-        <p class="font-text text-p font-normal overflow-x-hidden">Some quick example text to build on the card title 
-          and make up the bulk of the card's content.</p>
+    <div class="bg-yellow-100">
+      <div class=" w-pimg h-[70%]">
+          <img src="./assetes/products/1.jpg" alt="product" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+        </div>
+      <div class="w-pinfo h-pinfo bg-orange-100 text-center">
+        <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Basic Tee
+              </a>
+          </h3>
+        <p class="mt-1 text-sm text-gray-500">Black</p>
+        <p class="text-sm font-medium text-gray-900">$35</p>
       </div>
     </div>
-      <div class="bg-white">
-      <img src="./assetes/products/5.jpg" class="w-pimg h-pimg" alt="product">
-      <div class="w-pinfo h-pinfo bg-orange-200 text-center">
-        <h5 class="font-titles text-bt font-medium">Card title</h5>
-        <p class="font-text text-p font-normal overflow-x-hidden">Some quick example text to build on the card title 
-          and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-      <div class="bg-white">
-      <img src="./assetes/products/6.jpg" class="w-pimg h-pimg" alt="product">
-      <div class="w-pinfo h-pinfo bg-orange-200 text-center">
-        <h5 class="font-titles text-bt font-medium">Card title</h5>
-        <p class="font-text text-p font-normal overflow-x-hidden">Some quick example text to build on the card title 
-          and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-      <div class="bg-white">
-      <img src="./assetes/products/7.jpg" class="w-pimg h-pimg" alt="product">
-      <div class="w-pinfo h-pinfo bg-orange-200 text-center">
-        <h5 class="font-titles text-bt font-medium">Card title</h5>
-        <p class="font-text text-p font-normal overflow-x-hidden">Some quick example text to build on the card title 
-          and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-      <div class="bg-white">
-      <img src="./assetes/products/8.jpg" class="w-pimg h-pimg" alt="product">
-      <div class="w-pinfo h-pinfo bg-orange-200 text-center">
-        <h5 class="font-titles text-bt font-medium">Card title</h5>
-        <p class="font-text text-p font-normal overflow-x-hidden">Some quick example text to build on the card title 
-          and make up the bulk of the card's content.</p>
+    <div class="bg-yellow-100">
+      <div class=" w-pimg h-[70%]">
+          <img src="./assetes/products/1.jpg" alt="product" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+        </div>
+      <div class="w-pinfo h-pinfo bg-orange-100 text-center">
+        <h3 class="text-sm text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Basic Tee
+              </a>
+          </h3>
+        <p class="mt-1 text-sm text-gray-500">Black</p>
+        <p class="text-sm font-medium text-gray-900">$35</p>
       </div>
     </div>
     </div>
@@ -350,9 +354,44 @@
       <div class="h-full flex justify-center items-center bg-red-400">
         <button class="text-h4"><i class="fa-solid fa-chevron-left" style="color: #FFD43B;"></i></button>
         <div class="w-test h-test flex justify-center items-center overflow-hidden">
-          <div class=" w-full h-full bg-red-200" data-test>1</div>
-          <div class=" w-full h-full bg-yellow-200 hidden" data-test>2</div>
-          <div class=" w-full h-full bg-pink-200 hidden" data-test>3</div>
+          <div class=" w-full h-full bg-red-200 flex flex-col items-center justify-center text-center" data-test>
+          <h4 className="text-h4 font-text font-medium">
+                Reviewwed by People
+              </h4>
+              <h2 className="text-h2 mb-6">Client's Testimonials</h2>
+              <p className="text-p font-text text-text-gray leading-normal">
+                Discover the positive impact we've made on the our clients by
+                reading through their testimonials. Our clients have experienced
+                our service and result, and they're eager to share their
+                positive experiences with you.
+              </p>
+          </div>
+
+          <div class=" w-full h-full bg-yellow-200 flex flex-col items-center justify-center text-center hidden" data-test>
+          <h4 className="text-h4 font-text font-medium">
+                Reviewwed by People
+              </h4>
+              <h2 className="text-h2 mb-6">Client's Testimonials</h2>
+              <p className="text-p font-text text-text-gray leading-normal">
+                Discover the positive impact we've made on the our clients by
+                reading through their testimonials. Our clients have experienced
+                our service and result, and they're eager to share their
+                positive experiences with you.
+              </p>
+          </div>
+
+          <div class=" w-full h-full bg-pink-200 flex flex-col items-center justify-center text-center hidden" data-test>
+          <h4 className="text-h4 font-text font-medium">
+                Reviewwed by People
+              </h4>
+              <h2 className="text-h2 mb-6">Client's Testimonials</h2>
+              <p className="text-p font-text text-text-gray leading-normal">
+                Discover the positive impact we've made on the our clients by
+                reading through their testimonials. Our clients have experienced
+                our service and result, and they're eager to share their
+                positive experiences with you.
+              </p>
+          </div>
         </div>
         <button class="text-h4"><i class="fa-solid fa-chevron-right" style="color: #FFD43B;"></i></button>
       </div>
