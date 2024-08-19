@@ -2,7 +2,7 @@
   {
     "id": 1,
     "category": "chair",
-    "img": "../assetes/products/1.jpg",
+    "img": "./assetes/products/1.jpg",
     "description": "Little Armchair Sheepskin",
     "price": 986,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other2.jpg"],
@@ -15,7 +15,7 @@
   {
     "id": 2,
     "category": "kitchen",
-    "img": "../assetes/products/2.jpg",
+    "img": "./assetes/products/2.jpg",
     "description": "Pop-Up Toaster",
     "price": 45,
     "otherImgs": ["../assetes/products/otherProducts/toster1.jpg", "../assetes/products/otherProducts/toster2.jpg"],
@@ -28,7 +28,7 @@
   {
     "id": 3,
     "category": "lamp",
-    "img": "../assetes/products/3.png",
+    "img": "./assetes/products/3.png",
     "description": "Lamp Light Blue",
     "price": 79,
     "otherImgs": ["../assetes/products/otherProducts/lampblue1.webp", "../assetes/products/otherProducts/lampblue2.webp"],
@@ -41,7 +41,7 @@
   {
     "id": 4,
     "category": "furniture",
-    "img": "../assetes/products/4.jpg",
+    "img": "./assetes/products/4.jpg",
     "description": "Pulp Unit - 5 Compartments",
     "price": 254,
     "otherImgs": ["../assetes/products/otherProducts/pulpunit1.jpg", "../assetes/products/otherProducts/pulpunit2.jpg"],
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "category": "lamp",
-    "img": "../assetes/products/5.jpg",
+    "img": "./assetes/products/5.jpg",
     "description": "Golden Modern Light",
     "price": 189,
     "otherImgs": ["../assetes/products/otherProducts/cleaningoil1.jpg", "../assetes/products/otherProducts/cleaningoil2.jpg"],
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "category": "skin-care",
-    "img": "../assetes/products/6.jpg",
+    "img": "./assetes/products/6.jpg",
     "description": "Body Oil 200ml",
     "price": 67,
     "otherImgs": ["../assetes/products/otherProducts/blackandwhite1.webp", "../assetes/products/otherProducts/blackandwhite2.webp"],
@@ -80,7 +80,7 @@
   {
     "id": 7,
     "category": "lamp",
-    "img": "../assetes/products/7.jpg",
+    "img": "./assetes/products/7.jpg",
     "description": "Black and White Lamp",
     "price": 220,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -93,7 +93,7 @@
   {
     "id": 8,
     "category": "furniture",
-    "img": "../assetes/products/8.jpg",
+    "img": "./assetes/products/8.jpg",
     "description": "Gejst Shelf A Black Ash/Black",
     "price": 115,
     "otherImgs": ["../assetes/products/otherProducts/bodyoil1.jpg", "../assetes/products/otherProducts/bodyoil2.jpg"],
@@ -106,7 +106,7 @@
   {
     "id": 9,
     "category": "furniture",
-    "img": "../assetes/products/9.jpg",
+    "img": "./assetes/products/9.png",
     "description": "Cube Lolo Vase Black",
     "price": 161,
     "otherImgs": ["../assetes/products/otherProducts/shelf1.webp", "../assetes/products/otherProducts/shelf2.webp"],
@@ -119,7 +119,7 @@
   {
     "id": 10,
     "category": "chair",
-    "img": "../assetes/products/10.jpg",
+    "img": "./assetes/products/10.jpg",
     "description": "Traditional Armchair",
     "price": 89,
     "otherImgs": ["../assetes/products/otherProducts/vase1.webp", "../assetes/products/otherProducts/vase2.webp"],
@@ -132,7 +132,7 @@
   {
     "id": 11,
     "category": "lamp",
-    "img": "../assetes/products/11.jpg",
+    "img": "./assetes/products/11.jpg",
     "description": "The Sun Pendant Black",
     "price": 160,
     "otherImgs": ["../assetes/products/otherProducts/chairboom1.webp", "../assetes/products/otherProducts/chairboom2.webp"],
@@ -145,7 +145,7 @@
   {
     "id": 12,
     "category": "lamp",
-    "img": "../assetes/products/12.jpg",
+    "img": "./assetes/products/12.png",
     "description": "Simple Golden Lamp",
     "price": 220,
     "otherImgs": ["../assetes/products/otherProducts/blacklamp1.webp", "../assetes/products/otherProducts/blacklamp2.jpg"],
@@ -158,7 +158,7 @@
   {
     "id": 13,
     "category": "skin-care",
-    "img": "../assetes/products/13.jpg",
+    "img": "./assetes/products/13.jpg",
     "description": "Unbleached Cotton Pads 180",
     "price": 33,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -171,7 +171,7 @@
   {
     "id": 14,
     "category": "chair",
-    "img": "../assetes/products/14.jpg",
+    "img": "./assetes/products/14.png",
     "description": "Oak Spanish Chair",
     "price": 520,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -184,7 +184,7 @@
   {
     "id": 15,
     "category": "chair",
-    "img": "../assetes/products/15.jpg",
+    "img": "./assetes/products/15.jpg",
     "description": "Copenhagen Armchair",
     "price": 330,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -197,7 +197,7 @@
   {
     "id": 16,
     "category": "electronic",
-    "img": "../assetes/products/16.jpg",
+    "img": "./assetes/products/16.jpg",
     "description": "Anti Dark Light",
     "price": 120,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -210,7 +210,7 @@
   {
     "id": 17,
     "category": "lamp",
-    "img": "../assetes/products/17.jpg",
+    "img": "./assetes/products/17.png",
     "description": "Table Lamp",
     "price": 75,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -223,7 +223,7 @@
   {
     "id": 18,
     "category": "lamp",
-    "img": "../assetes/products/18.jpg",
+    "img": "./assetes/products/18.png",
     "description": "Mat Black Lamp",
     "price": 175,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -236,7 +236,7 @@
   {
     "id": 19,
     "category": "chair",
-    "img": "../assetes/products/19.jpg",
+    "img": "./assetes/products/19.jpg",
     "description": "Comfy Chair",
     "price": 119,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
@@ -249,7 +249,7 @@
   {
     "id": 20,
     "category": "skin-care",
-    "img": "../assetes/products/20.jpg",
+    "img": "./assetes/products/20.jpg",
     "description": "Body Oil 50ml",
     "price": 45,
     "otherImgs": ["../assetes/products/otherProducts/other1.jpg", "../assetes/products/otherProducts/other1.jpg"],
