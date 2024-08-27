@@ -12,38 +12,36 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class=" w-screen lp:max-w-9x0 4k:max-w-81x h-nav bg-white flex justify-between items-center mx-auto px-2" data-nav>
-    <div>
+    <nav class="w-full tab:w-full lp:max-w-9x0 desk:max-w-9x0 h-nav bg-white flex justify-between items-center mx-auto px-4 lg:px-2" data-nav>
+    <div class="lg:h-[8vh] lg:pt-2">
     <a href="./index.html" class="flex items-center gap-1 pointer">
     <i class="fa-solid fa-gem fa-2xl" style="color: #f8ab54;"></i>
-    <h2 class="text-blue-300 font-bold text-bt">Decor</h2>
+    <h2 class="text-blue-300 font-bold text-str">Decor</h2>
     </a>
     </div>
-    <div data-menu>
-    <ul class="flex gap-8">
-        <li class=" px-3"><a href="./index.html" class=" font-medium text-yellow-500 relative after:content-[''] after:absolute after:w-[60%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200">Home</a></li>
-        <li class=" px-3"><a href="./about.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">About us</a></li>
-        <li class=" px-3"><a href="./products.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Products</a></li>
-        <li class=" px-3"><a href="./contact.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Contact</a></li>
+    <div class="w-full h-screen tab:w-full tab:h-screen lg:w-test lg:h-[8vh] bg-white fixed lg:relative top-0 -left-full lg:left-0 desk:left-0 z-[100] " data-menu>
+    <button class="absolute right-3 top-0 tab:top-0 tab:right-3 text-bt lg:hidden desk:hidden" data-closebtn><i class="fa-solid fa-xmark"></i></button>
+    <ul class="h-full lg:h-[8vh] pt-20 lg:pt-0 flex flex-col items-center lg:flex lg:flex-row lg:justify-center gap-8 lg:block desk:block">
+        <li class="px-3"><a href="./index.html" class=" font-medium text-yellow-500 relative after:content-[''] after:absolute after:w-[60%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200">Home</a></li>
+        <li class="px-3"><a href="./about.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">About us</a></li>
+        <li class="px-3"><a href="./products.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Products</a></li>
+        <li class="px-3"><a href="./contact.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Contact</a></li>
     </ul>
     </div>
-    <div>
-    <a href="./cart.html">
-    <button><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></button>
-    </a>
-    <button>
-    Log In
-    </button>
+    <div class="lg:h-[8vh] lg:pt-3 flex gap-4">
+    <a href="./cart.html" class="mt-2 lg:mt-0"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></a>
+    <a href="./pages/Auth.html" class="hidden tab:hidden lg:block desk:block font-semibold text-p">Log In</a>
+    <button type="button" class="block tab:block lg:hidden desk:hidden text-bt" data-menubtn><i class="fa-solid fa-bars"></i></button>
     </div>
     </nav>
     <!-- img slider  -->
-    <section class="w-full h-slider bg-red-200">
+    <section class="w-full h-slider">
       <div class="w-full h-slider flex justify-center items-center relative">
         <img src="./assetes/banner/banner3.jpg" alt="slider2" class="w-full h-full object-center imgSlide">
         <img src="./assetes/banner/banner2.jpg" alt="slider3" class=" w-full h-full object-center imgSlide">
         <img src="./assetes/banner/banner4.jpg" alt="slider4" class="w-full h-full object-center imgSlide">
-        <button class="w-bt h-nav bg-[#ffffff63] text-h3 absolute left-4 z-10 cursor-pointer hover:bg-[#ffffff78]" onclick="preslide(-1)"><i class="fa-solid fa-chevron-left" style="color: #FFD43B;"></i></button>
-        <button class="w-bt h-nav bg-[#ffffff63] text-h3 absolute right-4 z-10 cursor-pointer hover:bg-[#ffffff78]" onclick="nextslide(1)"><i class="fa-solid fa-chevron-right" style="color: #FFD43B;"></i></button>
+        <button type="button" alt="buttuon-left" class="w-bt h-nav bg-[#ffffff63] text-h3 absolute left-4 z-10 cursor-pointer hover:bg-[#ffffff78]" onclick="preslide(-1)"><i class="fa-solid fa-chevron-left" style="color: #FFD43B;"></i></button>
+        <button type="button" alt="buttuon-right" class="w-bt h-nav bg-[#ffffff63] text-h3 absolute right-4 z-10 cursor-pointer hover:bg-[#ffffff78]" onclick="nextslide(1)"><i class="fa-solid fa-chevron-right" style="color: #FFD43B;"></i></button>
         <div class="w-test h-[4vh] mb-4 flex items-center justify-center gap-8 absolute z-10 bottom-0">
           <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded cursor-pointer" onclick="currentslide(1)"></span> 
           <span class="w-[15px] h-[15px] mx-[2px] bg-yellow-500 rounded cursor-pointer" onclick="currentslide(2)"></span> 
@@ -52,7 +50,7 @@
         </div>
     </section>
     <!-- hero section  -->
-    <section class="w-screen lp:max-w-9x0 4k:max-w-81x h-screen mx-auto my-8 grid grid-cols-com tab:grid-cols-con2 lp:grid-cols-hero grid-rows-ftT lp:grid-rows-hero gap-1 lp:gap-4 gc">
+    <section class="w-full tab:w-full lp:max-w-9x0 desk:max-w-9x0 h-auto lg:h-screen mx-auto my-8 grid grid-cols-com tab:grid-cols-con2 lp:grid-cols-hero grid-rows-ftT lp:grid-rows-hero gap-1 lp:gap-4 gc">
     <div class="overflow-hidden cursor-pointer relative go">
     <a href="./products.html">
     <img src="./assetes/header/home-img-1.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition duration-300">
@@ -79,9 +77,9 @@
     </div>
     </section>
     <!-- trending section  -->
-    <section class="w-screen lp:max-w-9x0 4k:max-w-81x h-screen lp:h-auto 4k:h-auto py-4 lp:py-12 4k:py-12 mx-auto my-4 items-center">
+    <section class="w-full lp:max-w-9x0 4k:max-w-81x h-auto lp:h-auto 4k:h-auto py-4 lp:py-12 4k:py-12 mx-auto my-4 items-center">
     <div><h1>Proud Products</h1></div>
-    <div class="h-auto grid grid-cols-com tab:grid-cols-coma lg:grid-cols-coma1 desk:grid-cols-coma2 grid-rows-prod tab:grid-rows-tprod lg:grid-rows-lprod desk:grid-rows-dprod my-4 py-2 lg:gap-y-4 justify-evenly" data-prouddata>
+    <div class="h-auto grid grid-cols-com tab:grid-cols-coma lg:grid-cols-coma1 desk:grid-cols-coma2 grid-rows-prod tab:grid-rows-tprod lg:grid-rows-lprod desk:grid-rows-dprod my-4 py-2 tab:gap-y-4 lg:gap-y-4 justify-evenly" data-prouddata>
     
     </div>
     </section>
@@ -93,7 +91,7 @@
     </video>
     </section>
     <!-- product slider  -->
-    <section class="w-screen lp:max-w-9x0 4k:max-w-9x0 h-screen lp:h-[70vh] relative gap-9 mx-auto my-8 ">
+    <section class="w-full tab:w-full lp:max-w-9x0 desk:max-w-9x0 h-screen lp:h-[70vh] relative gap-9 mx-auto my-8 ">
     <div>
     <h1>Tranding Items</h1>
     </div>
@@ -102,10 +100,11 @@
     </div>
     </section>
     <!-- testimonal section  -->
-    <section class="w-screen lp:max-w-9x0 4k:max-w-81x h-slider mx-auto my-8">
+    <section class="w-full lp:max-w-9x0 4k:max-w-81x h-slider mx-auto my-8">
       <div class="h-full flex justify-center items-center">
-        <button class="text-h4"><i class="fa-solid fa-chevron-left" style="color: #FFD43B;"></i></button>
-        <div class="w-test h-test flex justify-center items-center overflow-hidden">
+        <div class="w-test h-test flex justify-center items-center overflow-hidden relative">
+          <button class="text-h4 absolute left-0"><i class="fa-solid fa-chevron-left" style="color: #FFD43B;"></i></button>
+          <button class="text-h4 absolute right-0"><i class="fa-solid fa-chevron-right" style="color: #FFD43B;"></i></button>
           <div class=" w-full h-full bg-red-200 flex flex-col items-center justify-center text-center" data-test>
           <h4 className="text-h4 font-text font-medium">
                 Reviewwed by People
@@ -145,8 +144,8 @@
               </p>
           </div>
         </div>
-        <button class="text-h4"><i class="fa-solid fa-chevron-right" style="color: #FFD43B;"></i></button>
-      </div>
+        
+      
     </section>
     <!-- footer section  -->
     <footer class="newslatter">
@@ -200,5 +199,53 @@
       </section>
       <div class="bg-yellow-400 text-p text-center text-white font-semibold">Copy right</div>
     </footer>
+    
+  <script>
+    let slideIndex = 1;
+ImgSlider(slideIndex);
+
+function preslide(n) {
+  ImgSlider(slideIndex - n);
+}
+
+function nextslide(n) {
+  ImgSlider((slideIndex += n));
+}
+
+function currentslide(n) {
+  ImgSlider((slideIndex = n));
+}
+
+function ImgSlider(n) {
+  let Images = document.querySelectorAll(".imgSlide");
+  for (let index = 0; index < Images.length; index++) {
+    Images[index].classList.add("hidden");
+  }
+  slideIndex++;
+  if (slideIndex > Images.length) {
+    slideIndex = 1;
+  }
+  Images[slideIndex - 1].classList.remove("hidden");
+  Images[slideIndex - 1].classList.add("block");
+  setTimeout(ImgSlider, 3000);
+}
+
+let testIndex = 0;
+testSlider(testIndex);
+
+function testSlider(n) {
+  let Images = document.querySelectorAll("[data-test]");
+  for (let index = 0; index < Images.length; index++) {
+    Images[index].classList.add("hidden");
+  }
+  slideIndex++;
+  if (slideIndex > Images.length) {
+    slideIndex = 1;
+  }
+  Images[slideIndex - 1].classList.remove("hidden");
+  Images[slideIndex - 1].classList.add("block");
+  setTimeout(testSlider, 2000);
+}
+  </script>
 </body>
 </html>

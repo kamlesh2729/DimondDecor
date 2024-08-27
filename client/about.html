@@ -12,36 +12,34 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class=" w-screen lp:max-w-9x0 4k:max-w-81x h-nav flex justify-between items-center mx-auto px-2" data-nav>
-    <div>
-    <a href="./index.html" class="flex pointer">
-    <i class="fa-solid fa-gem fa-xl" style="color: #f8ab54;"></i>
-    <h2>Gems</h2>
+    <nav class="w-full tab:w-full lp:max-w-9x0 desk:max-w-9x0 h-nav bg-white flex justify-between items-center mx-auto px-4 lg:px-2" data-nav>
+    <div class="lg:h-[8vh] lg:pt-2">
+    <a href="./index.html" class="flex items-center pointer">
+    <i class="fa-solid fa-gem fa-2xl" style="color: #f8ab54;"></i>
+    <h2 class="text-blue-300 font-bold text-str">Decor</h2>
     </a>
     </div>
-    <div data-menu>
-    <ul class="flex gap-8">
+    <div class="w-full h-screen tab:w-full tab:h-screen lg:w-test lg:h-[8vh] bg-white fixed lg:relative top-0 -left-full lg:left-0 desk:left-0 z-[100] pt-3" data-menu>
+    <button class="absolute right-3 top-0 tab:top-0 tab:right-3 text-bt lg:hidden desk:hidden" data-closebtn><i class="fa-solid fa-xmark"></i></button>
+      <ul class="h-full lg:h-[8vh] pt-20 lg:pt-0 flex flex-col items-center lg:flex lg:flex-row lg:justify-center gap-8 lg:block desk:block">
         <li class=" px-3"><a href="./index.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Home</a></li>
         <li class=" px-3"><a href="./about.html" class=" font-medium text-yellow-500 relative after:content-[''] after:absolute after:w-[60%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200">About us</a></li>
         <li class=" px-3"><a href="./products.html" class=" font-medium relative duration-300 hover:text-yellow-500  after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Products</a></li>
         <li class=" px-3"><a href="./contact.html" class=" font-medium relative duration-300 hover:text-yellow-500  after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Contact</a></li>
     </ul>
     </div>
-    <div>
-    <a href="./cart.html">
-    <button><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></button>
-    </a>
-    <button>
-    Log In
-    </button>
+    <div class="lg:h-[8vh] lg:pt-3 flex gap-4">
+    <a href="./cart.html" class="mt-2 lg:mt-0"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></a>
+    <a href="./pages/Auth.html" class="hidden tab:hidden lg:block desk:block font-semibold text-p">Log In</a>
+    <button type="button" class="block tab:block lg:hidden desk:hidden text-bt" data-menubtn><i class="fa-solid fa-bars"></i></button>
     </div>
     </nav>
     <!-- about hero  -->
-    <section class="hero">
+  <section class="hero">
     <div><a href="./index.html">Home</a>> About Us</div>
     </section>
     <!-- about section1  -->
-    <section>
+  <section>
     <div>
     <h2>title head</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi saepe molestias cumque blanditiis quidem ad et, est impedit libero, laboriosam tempore expedita. Quibusdam iusto architecto illum nihil culpa magnam consectetur.
@@ -55,7 +53,7 @@
     </div>
     </section>
     <!-- about section2  -->
-    <section>
+  <section>
     <div>
         <img src="./assetes/banner/banner2.jpg" alt="about">
     </div>

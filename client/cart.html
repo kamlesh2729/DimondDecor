@@ -12,31 +12,68 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class=" w-screen lp:max-w-9x0 4k:max-w-81x h-nav bg-white flex justify-between items-center mx-auto px-2" data-nav>
-    <div>
+    <nav class="w-full tab:w-full lp:max-w-9x0 desk:max-w-9x0 h-nav bg-white flex justify-between items-center mx-auto px-4 lg:px-2" data-nav>
+    <div class="lg:h-[8vh] lg:pt-2">
     <a href="./index.html" class="flex items-center gap-1 pointer">
     <i class="fa-solid fa-gem fa-2xl" style="color: #f8ab54;"></i>
-    <h2 class="text-blue-300 font-bold text-bt">Decor</h2>
+    <h2 class="text-blue-300 font-bold text-str">Decor</h2>
     </a>
     </div>
-    <div data-menu>
-    <ul class="flex gap-8">
+    <div class="w-full h-screen tab:w-full tab:h-screen lg:w-test lg:h-[8vh] bg-white fixed lg:relative top-0 -left-full lg:left-0 desk:left-0 z-[100] pt-3" data-menu>
+    <button class="absolute right-3 top-0 tab:top-0 tab:right-3 text-bt lg:hidden desk:hidden" data-closebtn><i class="fa-solid fa-xmark"></i></button>
+      <ul class="h-full lg:h-[8vh] pt-20 lg:pt-0 flex flex-col items-center lg:flex lg:flex-row lg:justify-center gap-8 lg:block desk:block">
         <li class=" px-3"><a href="./index.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Home</a></li>
         <li class=" px-3"><a href="./about.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">About us</a></li>
         <li class=" px-3"><a href="./products.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Products</a></li>
         <li class=" px-3"><a href="./contact.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Contact</a></li>
-    </ul>
+      </ul>
     </div>
-    <div>
-    <button><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></button>
-    <button>
-    Log In
-    </button>
+    <div class="lg:h-[8vh] lg:pt-3 flex gap-4">
+    <a href="./cart.html" class="mt-2 lg:mt-0"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></a>
+    <a href="./pages/Auth.html" class="hidden tab:hidden lg:block desk:block font-semibold text-p">Log In</a>
+    <button type="button" class="block tab:block lg:hidden desk:hidden text-bt" data-menubtn><i class="fa-solid fa-bars"></i></button>
     </div>
     </nav>
-    <section class="lp:max-w-9x0 4k:max-w-9x0 h-auto mx-auto">
-      cart section is here
-    <div class="inline-flex items-center justify-center bg-pink-100"><img src="./assetes/cart/empty-cart.png" alt="empty-cart"></div>
+
+    <section class="lp:max-w-9x0 4k:max-w-9x0 h-screen overflow-y-scroll mx-auto flex flex-col gap-y-4">
+      <!-- <div class="inline-flex items-center justify-center bg-pink-100"><img src="./assetes/cart/empty-cart.png" alt="empty-cart"></div> -->
+      
+      <div class=" h-pimg1 flex justify-between items-center px-4 bg-green-200">
+      <div class="h-[30vh] w-[13vw]">
+      <img src="./assetes/products/1.jpg" class="h-full w-full" alt="product">
+      </div>
+      <div>
+      <span>product name</span>
+      <div><button>+</button><span>amount</span><button>-</button></div>
+      </div>
+      <div>
+      <button class="w-25 h-25 rounded bg-gray-200 cursor-pointer hover:bg-gray-300 "><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      </div>
+      <div class=" h-pimg1 flex justify-between items-center px-4 bg-green-200">
+      <div class="h-[30vh] w-[13vw]">
+      <img src="./assetes/products/2.jpg" class="w-full h-full" alt="product">
+      </div>
+      <div>
+      <span>product name</span>
+      <div><button>+</button><span>amount</span><button>-</button></div>
+      </div>
+      <div>
+      <button class="w-25 h-25 rounded bg-gray-200 cursor-pointer hover:bg-gray-300 "><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      </div>
+      <div class=" h-pimg1 flex justify-between items-center px-4 bg-green-200">
+      <div class="h-[30vh] w-[13vw]">
+      <img src="./assetes/products/3.png" class="w-full h-full" alt="product">
+      </div>
+      <div>
+      <span>product name</span>
+      <div><button>+</button><span>amount</span><button>-</button></div>
+      </div>
+      <div>
+      <button class="w-25 h-25 rounded bg-gray-200 cursor-pointer hover:bg-gray-300 "><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      </div>
     </section>
 
 <footer class="newslatter">
@@ -48,7 +85,7 @@
           </div>
         </section>
         <section class="py-2 bg-[#f0f0806f]">
-        <div class="w-full lp:max-w-9x0 4k:max-w-9x0 h-auto lp:h-ho 4k:h-ho mx-auto grid grid-cols-com lp:grid-cols-mod 4k:grid-cols-mod py-4">
+        <div class="w-full lg:max-w-9x0 desk:max-w-9x0 h-auto lp:h-ho desk:h-ho mx-auto grid grid-cols-com lp:grid-cols-mod desk:grid-cols-mod py-4">
             <div class="text-start">
             <a href="./index.html">
             <h2 class="text-white font-medium text-bt font-text">DiamondDecor</h2>

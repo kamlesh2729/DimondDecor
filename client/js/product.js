@@ -1,3 +1,6 @@
+const mobnav = document.querySelector("[data-menu]");
+const menuclose = document.querySelector("[data-closebtn]");
+const menuopen = document.querySelector("[data-menubtn]");
 const aproduct = document.querySelector("[data-alldata]");
 let listProducts = [];
 
@@ -23,7 +26,7 @@ const addallProduct = () => {
         <p class="text-p tab:text-p lg:text-p desk:text-[1.3rem] font-medium text-text">${product.texture}</p>
         <p class="text-p tab:text-p lg:text-p desk:text-[1.3rem] font-medium text-text">${product.price}</p>
         </div>
-        <button class="w-[260px] tab:w- lg:w- desk:w- h-10 text-p font-semibold left-[0.4rem] desk:left-[4rem] absolute -bottom-[1.5rem] transtion-all duration-500 ease-in-out hidden group-hover:block group-hover:bottom-0 hover:duration-500 hover:ease-in-out bg-yellow-200">
+        <button class="w-[38vw] tab:w-[19vw] lg:w-[11vw] desk:w-[11vw] h-10 text-p font-semibold rounded-full absolute left-[4rem] tab:left-[4rem] lg:left-[4rem] desk:left-[4rem] -bottom-[1.5rem] transtion-all duration-500 ease-in-out hidden group-hover:block group-hover:bottom-0 hover:duration-500 hover:ease-in-out bg-yellow-200">
           <i class="fa-solid fa-bag-shopping"></i> Add to Cart
         </button>
       </div>
@@ -43,3 +46,12 @@ const getAllProduct = () => {
 };
 
 getAllProduct();
+
+menuclose.addEventListener("click", () => {
+  mobnav.classList.remove('left-0');
+  mobnav.classList.add('-left-full');
+});
+menuopen.addEventListener("click", () => {
+  mobnav.classList.remove('-left-full');
+  mobnav.classList.add('left-0');
+});
