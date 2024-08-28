@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class="w-full tab:w-full lp:max-w-9x0 desk:max-w-9x0 h-nav bg-white flex justify-between items-center mx-auto px-4 lg:px-2" data-nav>
+  <nav class="w-full tab:w-full lp:max-w-9x0 desk:max-w-9x0 h-nav bg-white flex justify-between items-center mx-auto px-4 lg:px-2" data-nav>
     <div class="lg:h-[8vh] lg:pt-2">
     <a href="./index.html" class="flex items-center pointer">
     <i class="fa-solid fa-gem fa-2xl" style="color: #f8ab54;"></i>
@@ -29,7 +29,7 @@
     </ul>
     </div>
     <div class="lg:h-[8vh] lg:pt-3 flex gap-4">
-    <a href="./cart.html" class="mt-2 lg:mt-0"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></a>
+    <span class="mt-2 lg:mt-0" data-cartbtn><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></span>
     <a href="./pages/Auth.html" class="hidden tab:hidden lg:block desk:block font-semibold text-p">Log In</a>
     <button type="button" class="block tab:block lg:hidden desk:hidden text-bt" data-menubtn><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -37,6 +37,97 @@
     <!-- about hero  -->
   <section class="hero">
     <div><a href="./index.html">Home</a>> About Us</div>
+    </section>
+  <!-- cart section  -->
+<section class="w-full lp:max-w-3x4 4k:max-w-3x4 h-screen fixed top-0 right-0 z-[102]" data-cartbox>
+      <div class="w-full h-screen lg:min-h-[40vh] overflow-y-scroll text-white flex flex-col gap-y-4 py-4 bg-gray-700" data-citems>
+        <h2>Shopping Cart</h2>
+        <!-- <div class="inline-flex items-center justify-center bg-pink-100"><img src="./assetes/cart/empty-cart.png" alt="empty-cart"></div> -->
+
+        <div class=" h-pimg1 flex justify-between mx-2 bg-yellow-200 text-black">
+        <div class="h-[20vh] w-[10vw] py-1">
+        <img src="./assetes/products/1.jpg" class="h-full w-full" alt="product">
+        </div>
+        <div class="py-4">
+        <span class="mt-2 text-p text-center font-semibold">product name</span>
+        <div class="mt-2 text-p text-center font-semibold">amount</div>
+        <div class="mt-2 flex items-center">
+          <button class="w-8 h-8 text-center text-str bg-gray-100 rounded-full"><i class="fa-solid fa-plus fa-2xs" style="color: #46d61f;"></i></button>
+          <span class="w-20 h-8 text-center text-p font-semibold">1</span>
+          <button class="w-8 h-8 text-center text-str bg-gray-100 rounded-full "><i class="fa-solid fa-minus fa-2xs" style="color: #df0707;"></i></button>
+        </div>
+        </div>
+        <div class="py-4">
+        <span class="text-p font-medium">total amount</span>
+        <div class="text-p font-semibold">amount</div>
+        </div>
+        <div class="relative">
+        <button class="w-6 h-6 text-center text-p text-red-500 hover:text-black bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        </div>
+        <div class=" h-pimg1 flex justify-between px-4 bg-white">
+        <div class="h-[20vh] w-[10vw] py-1">
+        <img src="./assetes/products/2.jpg" class="w-full h-full" alt="product">
+        </div>
+        <div class="py-4">
+        <span class="mt-2 text-p text-center font-medium">product name</span>
+        <span>amount</span>
+        <div class="mt-2 flex items-center">
+          <button class="w-8 h-8 text-center text-str bg-green-200 rounded-full">+</button>
+          <span class="w-20 h-8 text-center text-p font-semibold">1</span>
+          <button class="w-8 h-8 text-center text-str bg-red-200 rounded-full ">-</button>
+        </div>
+        </div>
+        <div class="py-4">
+        <span class="text-p font-medium">total amount</span>
+        <div class="text-p font-semibold">amount</div>
+        </div>
+        <div class="relative">
+        <button class="w-6 h-6 text-center text-p bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        </div>
+        <div class=" h-pimg1 flex justify-between px-4 bg-white">
+        <div class="h-[20vh] w-[10vw] py-1">
+        <img src="./assetes/products/3.png" class="w-full h-full" alt="product">
+        </div>
+        <div class="py-4">
+        <span class="mt-2 text-p text-center font-medium">product name</span>
+        <div class="mt-2 flex items-center">
+          <button class="w-8 h-8 text-center text-str bg-green-200 rounded-full">+</button>
+          <span class="w-20 h-8 text-center text-p font-semibold">amount</span>
+          <button class="w-8 h-8 text-center text-str bg-red-200 rounded-full ">-</button>
+        </div>
+        </div>
+        <div class="py-4">
+        <span class="text-p font-medium">total amount</span>
+        <div class="text-p font-semibold">amount</div>
+        </div>
+        <div class="relative">
+        <button class="w-6 h-6 text-center text-p bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        </div>
+        <div class=" h-pimg1 flex justify-between px-4 bg-white">
+        <div class="h-[20vh] w-[10vw] py-1">
+        <img src="./assetes/products/1.jpg" class="h-full w-full" alt="product">
+        </div>
+        <div class="py-4">
+        <span class="mt-2 text-p text-center font-medium">product name</span>
+        <div class="mt-2 flex items-center">
+          <button class="w-8 h-8 text-center text-str bg-green-200 rounded-full">+</button>
+          <span class="w-20 h-8 text-center text-p font-semibold">amount</span>
+          <button class="w-8 h-8 text-center text-str bg-red-200 rounded-full ">-</button>
+        </div>
+        </div>
+        <div class="py-4">
+        <span class="text-p font-medium">total amount</span>
+        <div class="text-p font-semibold">amount</div>
+        </div>
+        <div class="relative">
+        <button class="w-6 h-6 text-center text-p bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        </div>
+      </div>
+      
     </section>
     <!-- about section1  -->
   <section>
@@ -66,7 +157,7 @@
     Consectetur in, eius officia porro fugiat aliquam sapiente, non iste saepe neque modi rem? Eligendi nisi deleniti voluptas modi reprehenderit possimus magnam perferendis blanditiis. Dignissimos corrupti reprehenderit ratione? Non, hic.</p>
     </div>
     </section>
-
+<!-- footer section  -->
 <footer class="newslatter">
         <section class="h-ho w-full text-center flex flex-col items-center justify-center">
           <h2 class=" my-3 font-semibold text-bt text-blue-400">News Latter</h2>

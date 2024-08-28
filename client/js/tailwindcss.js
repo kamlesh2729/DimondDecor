@@ -37,7 +37,7 @@ tailwind.config = {
       },
       maxWidth: {
         "3lx": "50rem",
-        "3x4": "55rem",
+        "3x4": "40vw",
         "9x0": "90vw",
         80: "80rem",
         44: "44rem",
