@@ -22,15 +22,14 @@
     </div>
     <div class="w-full h-screen tab:w-full tab:h-screen lg:w-test lg:h-[8vh] bg-white fixed lg:relative top-0 -left-full lg:left-0 desk:left-0 z-3 pt-3" data-menu>
     <button class="absolute right-3 top-0 tab:top-0 tab:right-3 text-bt lg:hidden desk:hidden" data-closebtn><i class="fa-solid fa-xmark"></i></button>
-    <ul class="h-full lg:h-[8vh] pt-20 lg:pt-0 flex flex-col items-center lg:flex lg:flex-row lg:justify-center gap-8 lg:block desk:block">
+    <ul class="h-full lg:h-[8vh] pt-20 lg:pt-0 flex flex-col items-center lg:flex lg:flex-row lg:justify-center gap-8">
         <li class=" px-3"><a href="./index.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Home</a></li>
-        <li class=" px-3"><a href="./about.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">About us</a></li>
         <li class=" px-3"><a href="./products.html" class=" font-medium text-yellow-500 relative after:content-[''] after:absolute after:w-[60%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200">Products</a></li>
         <li class=" px-3"><a href="./contact.html" class=" font-medium relative duration-300 hover:text-yellow-500 after:content-[''] after:absolute after:w-[0%] after:h-[3px] after:bottom-[-3px] after:left-[0] after:bg-blue-200 after:duration-300 hover:after:w-[60%]">Contact</a></li>
     </ul>
     </div>
-    <div class="lg:h-[8vh] lg:pt-3 flex gap-4">
-    <span class="mt-2 lg:mt-0" data-cartbtn><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></span>
+    <div class="lg:h-[8vh] lg:pt-3 flex desk:items-center gap-4">
+    <button type="button" class="mt-2 lg:mt-0 cursor-pointer" data-cartbtn onclick="cartOpen()"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #FFD43B;"></i></button>
     <a href="./pages/Auth.html" class="hidden tab:hidden lg:block desk:block font-semibold text-p">Log In</a>
     <button type="button" class="block tab:block lg:hidden desk:hidden text-bt" data-menubtn><i class="fa-solid fa-bars"></i></button>
     </div>
@@ -45,33 +44,33 @@
   </div>
   </section>
   <!-- cart section  -->
-<section class="w-full lp:max-w-3x4 4k:max-w-3x4 h-screen fixed top-0 right-0 z-[102]" data-cartbox>
-      <div class="w-full h-screen lg:min-h-[40vh] overflow-y-scroll text-white flex flex-col gap-y-4 py-4 bg-gray-700" data-citems>
-        <h2>Shopping Cart</h2>
+<section class="w-full lp:max-w-3x4 4k:max-w-3x4 bg-gray-700 fixed top-0 -right-full bottom-0 z-[102]" data-cartbox>
+      <div class="flex gap-12 text-center ml-2"><h2 class="text-p text-white text-center font-semibold pt-1">Shopping Cart</h2> <span class="text-str absolute right-[4rem]" onclick="cartClose()"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></span></div>
+      <div class="w-full h-[86vh] overflow-y-scroll text-white flex flex-col gap-y-4 pt-1" data-citems>
         <!-- <div class="inline-flex items-center justify-center bg-pink-100"><img src="./assetes/cart/empty-cart.png" alt="empty-cart"></div> -->
 
-        <div class=" h-pimg1 flex justify-between mx-2 bg-yellow-200 text-black">
-        <div class="h-[20vh] w-[10vw] py-1">
+        <!-- <div class=" h-[20vh] flex justify-between bg-yellow-200 text-black">
+        <div class="h-[20vh] w-[10vw]">
         <img src="./assetes/products/1.jpg" class="h-full w-full" alt="product">
         </div>
-        <div class="py-4">
+        <div class="py-2">
         <span class="mt-2 text-p text-center font-semibold">product name</span>
-        <div class="mt-2 text-p text-center font-semibold">amount</div>
+        <div class="mt-1 text-p text-center font-semibold">amount</div>
         <div class="mt-2 flex items-center">
-          <button class="w-8 h-8 text-center text-str bg-gray-100 rounded-full"><i class="fa-solid fa-plus fa-2xs" style="color: #46d61f;"></i></button>
-          <span class="w-20 h-8 text-center text-p font-semibold">1</span>
-          <button class="w-8 h-8 text-center text-str bg-gray-100 rounded-full "><i class="fa-solid fa-minus fa-2xs" style="color: #df0707;"></i></button>
+          <span class="w-8 h-8 text-center text-str bg-gray-100 rounded-full"><i class="fa-solid fa-plus fa-2xs" style="color: #46d61f;"></i></span>
+          <span class="w-8 h-8 text-center text-str font-semibold">1</span>
+          <span class="w-8 h-8 text-center text-str bg-gray-100 rounded-full "><i class="fa-solid fa-minus fa-2xs" style="color: #df0707;"></i></span>
         </div>
         </div>
-        <div class="py-4">
-        <span class="text-p font-medium">total amount</span>
+        <div class="py-2">
+        <span class="text-p font-medium">total</span>
         <div class="text-p font-semibold">amount</div>
         </div>
         <div class="relative">
         <button class="w-6 h-6 text-center text-p text-red-500 hover:text-black bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
         </div>
         </div>
-        <div class=" h-pimg1 flex justify-between px-4 bg-white">
+        <div class=" h-[20vh] flex justify-between px-4 bg-white text-black">
         <div class="h-[20vh] w-[10vw] py-1">
         <img src="./assetes/products/2.jpg" class="w-full h-full" alt="product">
         </div>
@@ -92,7 +91,7 @@
         <button class="w-6 h-6 text-center text-p bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
         </div>
         </div>
-        <div class=" h-pimg1 flex justify-between px-4 bg-white">
+        <div class=" h-[20vh] flex justify-between px-4 bg-white text-black">
         <div class="h-[20vh] w-[10vw] py-1">
         <img src="./assetes/products/3.png" class="w-full h-full" alt="product">
         </div>
@@ -112,7 +111,7 @@
         <button class="w-6 h-6 text-center text-p bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
         </div>
         </div>
-        <div class=" h-pimg1 flex justify-between px-4 bg-white">
+        <div class=" h-[20vh] flex justify-between px-4 bg-white text-black">
         <div class="h-[20vh] w-[10vw] py-1">
         <img src="./assetes/products/1.jpg" class="h-full w-full" alt="product">
         </div>
@@ -132,8 +131,33 @@
         <button class="w-6 h-6 text-center text-p bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
         </div>
         </div>
+        <div class=" h-[20vh] flex justify-between bg-yellow-200 text-black">
+        <div class="h-[20vh] w-[10vw]">
+        <img src="./assetes/products/1.jpg" class="h-full w-full" alt="product">
+        </div>
+        <div class="py-2">
+        <span class="mt-2 text-p text-center font-semibold">product name</span>
+        <div class="mt-1 text-p text-center font-semibold">amount</div>
+        <div class="mt-2 flex items-center">
+          <span class="w-8 h-8 text-center text-str bg-gray-100 rounded-full"><i class="fa-solid fa-plus fa-2xs" style="color: #46d61f;"></i></span>
+          <span class="w-8 h-8 text-center text-str font-semibold">1</span>
+          <span class="w-8 h-8 text-center text-str bg-gray-100 rounded-full "><i class="fa-solid fa-minus fa-2xs" style="color: #df0707;"></i></span>
+        </div>
+        </div>
+        <div class="py-2">
+        <span class="text-p font-medium">total</span>
+        <div class="text-p font-semibold">amount</div>
+        </div>
+        <div class="relative">
+        <button class="w-6 h-6 text-center text-p text-red-500 hover:text-black bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        </div> -->
       </div>
-      
+      <div class="w-full h-auto flex gap-8 px-4 pt-2 text-white text-str border-t-2 border-yellow-400 border-solid">
+        <span>Total:</span>
+        <span class="font-semibold text-str">12345</span>
+        <button class="bg-yellow-200 text-black">check out</button>
+      </div>
     </section>
   <!-- footer section  -->
   <footer class="newslatter">

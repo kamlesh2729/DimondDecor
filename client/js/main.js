@@ -1,3 +1,4 @@
+const Nav = document.querySelector("[data-nav]");
 const mobnav = document.querySelector("[data-menu]");
 const menuclose = document.querySelector("[data-closebtn]");
 const menuopen = document.querySelector("[data-menubtn]");
@@ -5,8 +6,7 @@ const aproduct = document.querySelector("[data-alldata]");
 const pproduct = document.querySelector("[data-prouddata]");
 const sproduct = document.querySelector("[data-slidedata]");
 const cproduct = document.querySelector("[data-citems]");
-const Signup = document.querySelector("[data-signup]");
-const Login = document.querySelector("[data-login]");
+const cartBox = document.querySelector("[data-cartbox]");
 const Formimage = document.querySelector("[data-formimg]");
 
 let listProducts = [];
@@ -51,6 +51,7 @@ const proudtProduct = () => {
     });
 };
 proudtProduct();
+
 // slider product 
 const addsliderproduct = () => {
   sliderProduct.map((product) => {
@@ -82,9 +83,16 @@ const Productslider = () => {
       const listProducts = data;
       sliderProduct = listProducts.filter((item) => item.id >= 12);
       addsliderproduct();
+
+      // get localstorage data
+      if (localStorage.getItem("cart")) {
+        cart = JSON.parse(localStorage.getItem("cart"));
+        addTocart();
+      }
     });
 };
 Productslider();
+
 // product page 
 const addallProduct = () => {
   listProducts.map((product) => {
@@ -124,9 +132,16 @@ const getAllProduct = () => {
     .then((data) => {
       listProducts = data;
       addallProduct();
+
+      // get localstorage data 
+      if (localStorage.getItem('cart')) {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        addTocart();
+      }
     });
 };
 getAllProduct();
+
 // add to cart 
 function checkdataid() {
   let product = this.parentElement;
@@ -148,44 +163,63 @@ function Cartquantity(product_id) {
   } else {
     cart[cartinproduct].quantity = cart[cartinproduct].quantity + 1;
   }
-  console.log(cart);
   addTocart();
-  
+  addtoLocalstorage();
+}
+function addtoLocalstorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log(cart);
 }
 function addTocart() {
   cproduct.innerHTML = '';
   if (cart.length > 0) {
     cart.forEach(carts => {
       let div = document.createElement("div");
-      div.classList.add("h-pimg1");
+      div.classList.add("h-[20vh]");
       div.classList.add("flex");
       div.classList.add("justify-between");
-      div.classList.add("px-4");
+      div.classList.add("text-black");
       div.classList.add("bg-white");
+      div.dataset.id = carts.product_id;
+      let productcart = listProducts.findIndex((value) => value.id == carts.product_id);
+      let product = listProducts[productcart];
       div.innerHTML = `
-      <div class="h-[20vh] w-[10vw] py-1">
-          <img src="./assetes/products/1.jpg" class="h-full w-full" alt="product">
-          </div>
-          <div class="py-4">
-          <span class="mt-2 text-p text-center font-medium">product name</span>
-          <div class="mt-2 flex items-center">
-            <button class="w-8 h-8 text-center text-str bg-gray-100 rounded-full"><i class="fa-solid fa-plus fa-2xs" style="color: #46d61f;"></i></button>
-            <span class="w-20 h-8 text-center text-p font-semibold">${carts.quantity}</span>
-            <button class="w-8 h-8 text-center text-str bg-gray-100 rounded-full "><i class="fa-solid fa-minus fa-2xs" style="color: #df0707;"></i></button>
-          </div>
-          </div>
-          <div class="py-4">
-          <span class="text-p font-medium">total amount</span>
-          <div class="text-p font-semibold">amount</div>
-          </div>
-          <div class="relative">
-          <button class="w-6 h-6 text-center text-p text-red-500 hover:text-black bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3 "><i class="fa-solid fa-xmark"></i></button>
-          </div>
+      <div class="h-[20vh] w-[10vw]">
+        <img src="${product.img}" class="h-[20vh]" alt="product">
+        </div>
+        <div class="py-2">
+        <span class="mt-2 text-p text-center font-semibold">${product.description}</span>
+        <div class="mt-1 text-p text-center font-semibold">${product.price}</div>
+        <div class="mt-2 flex items-center">
+          <span class="w-8 h-8 text-center text-str bg-gray-100 rounded-full" data-incressqty><i class="fa-solid fa-plus fa-2xs" style="color: #46d61f;"></i></span>
+          <span class="w-8 h-8 text-center text-str font-semibold">${carts.quantity}</span>
+          <span class="w-8 h-8 text-center text-str bg-gray-100 rounded-full" data-decressqty><i class="fa-solid fa-minus fa-2xs" style="color: #df0707;"></i></span>
+        </div>
+        </div>
+        <div class="py-2">
+        <span class="text-p font-medium">total</span>
+        <div class="text-p font-semibold">${product.price * carts.quantity}</div>
+        </div>
+        <div class="relative">
+        <button type="button" class="w-6 h-6 text-center text-p text-red-500 hover:text-black bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3" data-removecart><i class="fa-solid fa-xmark"></i></button>
+        </div>
       `;
       cproduct.appendChild(div);
-      console.log(div);
+      div.querySelector("[data-incressqty]").addEventListener("click", addQty);
+      div.querySelector("[data-decressqty]").addEventListener("click", lessQty);
+      div.querySelector("[data-removecart]").addEventListener("click", Deletecart);
     })
   }
+}
+
+function addQty(product_id) {
+  
+}
+function lessQty(product_id) {
+  
+}
+function Deletecart(product_id) {
+  
 }
 
 menuclose.addEventListener("click", () => {
@@ -197,16 +231,46 @@ menuopen.addEventListener("click", () => {
   mobnav.classList.remove("-left-full");
 });
 
-Signup.addEventListener("click", () => {
-  Formimage.classList.add("-translate-x-full");
-  Formimage.classList.remove("translate-x-0");
-  Formimage.classList.add("border-l-2");
-  Formimage.classList.remove("border-r-2");
-});
+const HandelScroll = () => {
+  if (window.scrollY > 0) {
+    Nav.style.position = "sticky";
+    Nav.style.top = "0";
+    Nav.classList.add('z-[108]');
+  } else {
+    Nav.style.position = "relative";
+  }
+};
 
-Login.addEventListener("click", () => {
-  Formimage.classList.add("translate-x-0");
-  Formimage.classList.remove("-translate-x-full");
-  Formimage.classList.add("border-r-2");
-  Formimage.classList.remove("border-l-2");
-});
+window.addEventListener("scroll", HandelScroll);
+
+function Signup() {
+    Formimage.classList.add("-translate-x-full");
+    Formimage.classList.remove("translate-x-0");
+    Formimage.classList.add("border-l-2");
+    Formimage.classList.remove("border-r-2");
+}
+function Login() {
+    Formimage.classList.add("translate-x-0");
+    Formimage.classList.remove("-translate-x-full");
+    Formimage.classList.add("border-r-2");
+    Formimage.classList.remove("border-l-2");
+}
+
+
+const cartOpen = () => {
+  cartBox.classList.add("right-0");
+  cartBox.classList.remove("-right-full");
+};
+const cartClose = () => {
+  cartBox.classList.add("-right-full");
+  cartBox.classList.remove("right-0");
+};
+
+function getcart() {
+  console.log('onload function work')
+  // get localstorage data
+  if (localStorage.getItem("cart")) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    addTocart();
+  }
+}
