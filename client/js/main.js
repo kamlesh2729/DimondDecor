@@ -26,18 +26,16 @@ const addproudproduct = () => {
     newProduct.classList.add("border-2");
     newProduct.classList.add("border-gray-200");
     newProduct.classList.add("border-solid");
+    newProduct.classList.add("hover:border-black");
     newProduct.innerHTML = `
       <div class=" w-pimg h-pimg tab:w-timg tab:h-timg lg:w-pimg1 lg:h-pimg1 desk:w-pimg2 desk:h-pimg2 rounded-t-lg">
           <img src="${product.img}" alt="product" class="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-t-lg">
         </div>
-      <div class="w-pimg h-pinfo tab:w-timg tab:h-tinfo lg:w-pimg1 lg:h-pinfo1 desk:w-pimg2 desk:h-pinfo2 text-center group relative rounded-b-lg ">
-        <a href="#" class="mt-2 tab:mt-2 lg:mt-2 desk:mt-4"><h3 class="text-p tab:text-p lg:text-p desk:text-str text-text font-semibold my-2 tab:my-2 lg:my-2 desk:my-4">Basic Tee</h3></a>
-        <div class="flex justify-center items-center gap-8">
-        <p class="text-p tab:text-p lg:text-p desk:text-[1.3rem] font-medium text-text">Black</p>
-        <p class="text-p tab:text-p lg:text-p desk:text-[1.3rem] font-medium text-text">$35</p>
+      <div class="w-pimg h-pinfo tab:w-timg tab:h-tinfo lg:w-pimg1 lg:h-pinfo1 desk:w-pimg2 desk:h-pinfo2 px-2 group relative rounded-b-lg ">
+        <a href="#" class="mt-2 tab:mt-2 lg:mt-2 desk:mt-4"><h3 class="text-p tab:text-p lg:text-p desk:text-str text-text font-semibold my-2 tab:my-2 lg:my-2 desk:my-4">${product.description}</h3></a>
+        <p class="text-p tab:text-p lg:text-p desk:text-[1.3rem] font-medium text-text">$ ${product.price}</p>
         </div>
-      </div>
-    `;
+        `;
     pproduct.appendChild(newProduct);
   });
 };
@@ -56,22 +54,27 @@ proudtProduct();
 const addsliderproduct = () => {
   sliderProduct.map((product) => {
     let newsProduct = document.createElement("div");
+    newsProduct.classList.add('w-[70vw]');
+    newsProduct.classList.add('lg:w-[20vw]');
+    newsProduct.classList.add('h-[55vh]');
+    newsProduct.classList.add('flex');
+    newsProduct.classList.add('flex-col');
+    newsProduct.classList.add('items-center');
+    newsProduct.classList.add('justify-center');
+    newsProduct.classList.add('rounded-lg');
+    newsProduct.classList.add('border-2');
+    newsProduct.classList.add('border-gray-200');
+    newsProduct.classList.add('border-solid');
+    newsProduct.classList.add('hover:border-black');
+
     newsProduct.innerHTML = `
-    <div class="flex flex-col items-center justify-center rounded-lg border-2 border-gray-200 border-solid hover:border-black">
-      <div class=" w-pimg h-pimg tab:w-timg lg:w-pimg1 desk:w-pimg2 tab:h-timg lg:h-pimg1 desk:h-pimg2 rounded-t-lg">
+      <div class=" w-pimg h-pimg tab:w-timg lg:w-pimg2 desk:w-pimg2 tab:h-timg lg:h-pimg1 desk:h-pimg2 rounded-t-lg">
           <img src="${product.img}" alt="product" class="h-full w-full object-cover object-center rounded-t-lg">
         </div>
       <div class="w-pimg h-pinfo tab:w-timg lg:w-pimg1 desk:w-pimg2 tab:h-tinfo lg:h-pinfo1 desk:h-pinfo2 text-center rounded-b-lg">
-        <h3 class="text-sm text-gray-700">
-              <a href="#">
-                <span aria-hidden="true" class="absolute inset-0"></span>
-                Basic Tee
-              </a>
-          </h3>
-        <p class="mt-1 text-sm text-gray-500">Black</p>
-        <p class="text-sm font-medium text-gray-900">$35</p>
+      <a href="#" class="mt-2 tab:mt-2 lg:mt-2 desk:mt-4"><h3 class="text-p tab:text-p lg:text-p desk:text-str text-text font-semibold my-2 tab:my-2 lg:my-2 desk:my-4"> ${product.description}</h3></a>
+        <p class="text-p font-semibold text-gray-900">$ ${product.price}</p>
       </div>
-    </div>
     `;
     sproduct.appendChild(newsProduct);
   });
@@ -150,6 +153,7 @@ function checkdataid() {
 }
 function Cartquantity(product_id) {
   let cartinproduct = cart.findIndex((value) => value.product_id == product_id);
+  console.log(cartinproduct);
   if (cart.length <= 0) {
     cart = [{
       product_id: product_id,
@@ -163,6 +167,7 @@ function Cartquantity(product_id) {
   } else {
     cart[cartinproduct].quantity = cart[cartinproduct].quantity + 1;
   }
+
   addTocart();
   addtoLocalstorage();
 }
@@ -274,3 +279,13 @@ function getcart() {
     addTocart();
   }
 }
+
+const slideLeft = () => {
+  let Slider = document.querySelector('[data-slidedata]');
+  Slider.scrollLeft = Slider.scrollLeft - 230;
+};
+
+const slideRight = () => {
+  let Slider = document.querySelector("[data-slidedata]");
+  Slider.scrollLeft = Slider.scrollLeft + 275;
+};

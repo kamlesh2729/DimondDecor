@@ -91,6 +91,7 @@ tailwind.config = {
         coma: "60vh 60vh",
         coma1: "50vh 50vh 50vh 50vh",
         coma2: "35vh 35vh 35vh 35vh",
+        fot: "20vw 20vw 20vw 20vw",
         mod: "260px 260px 260px 260px",
       },
       gridTemplateRows: {
