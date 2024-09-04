@@ -150,10 +150,14 @@ function checkdataid() {
   let product = this.parentElement;
   let product_id = product.parentElement.dataset.id;
   Cartquantity(product_id);
+  addQty(product_id);
+  lessQty(product_id);
 }
 function Cartquantity(product_id) {
   let cartinproduct = cart.findIndex((value) => value.product_id == product_id);
-  console.log(cartinproduct);
+  let cartProduct = listProducts.filter((value) => value.id == product_id);
+  console.log(cartProduct);
+  console.log(product_id);
   if (cart.length <= 0) {
     cart = [{
       product_id: product_id,
@@ -161,9 +165,10 @@ function Cartquantity(product_id) {
     }]
   } else if (cartinproduct < 0) {
     cart.push({
-        product_id: product_id,
-        quantity: 1
-      });
+      product_id: product_id,
+      product: cartProduct,
+      quantity: 1,
+    });
   } else {
     cart[cartinproduct].quantity = cart[cartinproduct].quantity + 1;
   }
@@ -173,7 +178,6 @@ function Cartquantity(product_id) {
 }
 function addtoLocalstorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
-  console.log(cart);
 }
 function addTocart() {
   cproduct.innerHTML = '';
@@ -289,3 +293,11 @@ const slideRight = () => {
   let Slider = document.querySelector("[data-slidedata]");
   Slider.scrollLeft = Slider.scrollLeft + 275;
 };
+
+
+function Login() {
+  const email = document.getElementById("Logemail");
+  const password = document.getElementById("Logpassword");
+  console.log(email, password);
+  
+}
