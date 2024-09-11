@@ -48,7 +48,7 @@ const proudtProduct = () => {
       addproudproduct();
     });
 };
-proudtProduct();
+// proudtProduct();
 
 // slider product 
 const addsliderproduct = () => {
@@ -94,7 +94,7 @@ const Productslider = () => {
       }
     });
 };
-Productslider();
+// Productslider();
 
 // product page 
 const addallProduct = () => {
@@ -143,7 +143,7 @@ const getAllProduct = () => {
       }
     });
 };
-getAllProduct();
+// getAllProduct();
 
 // add to cart 
 function checkdataid() {
@@ -295,9 +295,22 @@ const slideRight = () => {
 };
 
 
-function Login() {
-  const email = document.getElementById("Logemail");
-  const password = document.getElementById("Logpassword");
-  console.log(email, password);
-  
+const email = document.getElementById("Logemail");
+const password = document.getElementById("Logpassword");
+function UserLogin() {
+  console.log(email.value, password.value);
+}
+
+function HideShowpass() {
+  const PassonOff = document.getElementById("[data-eyeicon]");
+  var x = document.getElementById("Logpassword");
+  if (x.type === "password") {
+    x.type = "text";
+    PassonOff.classList.add("fa-eye-slash");
+    PassonOff.classList.remove("fa-eye");
+  } else {
+    x.type = "password";
+    PassonOff.classList.add("fa-eye");
+    PassonOff.classList.remove("fa-eye-slash");
+  }
 }
