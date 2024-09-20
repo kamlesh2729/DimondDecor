@@ -28,6 +28,14 @@ html {
     background-repeat: no-repeat;
 }
 
+#Logemail:active + .elabel,
+#Logemail:valid + .elabel{
+    bottom:2rem;
+}
+#Logpassword:active + .plabel,
+#Logpassword:valid + .plabel{
+    bottom:2rem;
+}
 
 @media screen and (min-width: 1020px) {
     .gc {

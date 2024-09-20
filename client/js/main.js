@@ -8,6 +8,8 @@ const sproduct = document.querySelector("[data-slidedata]");
 const cproduct = document.querySelector("[data-citems]");
 const cartBox = document.querySelector("[data-cartbox]");
 const Formimage = document.querySelector("[data-formimg]");
+const cartlength = document.querySelector("[data-cartlength]");
+const cartTotal = document.querySelector("[data-total]");
 
 let listProducts = [];
 let filteredProduct = [];
@@ -150,29 +152,34 @@ function checkdataid() {
   let product = this.parentElement;
   let product_id = product.parentElement.dataset.id;
   Cartquantity(product_id);
-  addQty(product_id);
-  lessQty(product_id);
 }
 function Cartquantity(product_id) {
   let cartinproduct = cart.findIndex((value) => value.product_id == product_id);
-  let cartProduct = listProducts.filter((value) => value.id == product_id);
-  console.log(cartProduct);
-  console.log(product_id);
+  const cartProduct = listProducts.filter((value) => value.id == product_id);
   if (cart.length <= 0) {
-    cart = [{
-      product_id: product_id,
-      quantity: 1
-    }]
-  } else if (cartinproduct < 0) {
+    cart = [
+      {
+        product_id: product_id,
+        id: cartProduct[0].id,
+        img: cartProduct[0].img,
+        price: cartProduct[0].price,
+        description: cartProduct[0].description,
+        quantity: 1,
+      },
+    ];
+  } else if(cartinproduct < 0 ){
     cart.push({
       product_id: product_id,
-      product: cartProduct,
+      id: cartProduct[0].id,
+      img: cartProduct[0].img,
+      price: cartProduct[0].price,
+      description: cartProduct[0].description,
       quantity: 1,
     });
   } else {
     cart[cartinproduct].quantity = cart[cartinproduct].quantity + 1;
   }
-
+  
   addTocart();
   addtoLocalstorage();
 }
@@ -181,7 +188,20 @@ function addtoLocalstorage() {
 }
 function addTocart() {
   cproduct.innerHTML = '';
-  if (cart.length > 0) {
+  let Total = 0;
+  if (cart.length == 0) {
+          let div = document.createElement("div");
+          div.classList.add("h-full");
+          div.classList.add("flex");
+          div.classList.add("justify-between");
+          div.classList.add("text-black");
+    div.classList.add("bg-white");
+    
+    div.innerHTML = `<div class="w-full h-full inline-flex items-center justify-center bg-pink-100">
+    <img src="./assetes/cart/empty-cart.png" alt="empty-cart"></div>`;
+
+    cproduct.appendChild(div);
+  } else {
     cart.forEach(carts => {
       let div = document.createElement("div");
       div.classList.add("h-[20vh]");
@@ -190,15 +210,14 @@ function addTocart() {
       div.classList.add("text-black");
       div.classList.add("bg-white");
       div.dataset.id = carts.product_id;
-      let productcart = listProducts.findIndex((value) => value.id == carts.product_id);
-      let product = listProducts[productcart];
+
       div.innerHTML = `
       <div class="h-[20vh] w-[10vw]">
-        <img src="${product.img}" class="h-[20vh]" alt="product">
+        <img src="${carts.img}" class="h-[20vh]" alt="product">
         </div>
         <div class="py-2">
-        <span class="mt-2 text-p text-center font-semibold">${product.description}</span>
-        <div class="mt-1 text-p text-center font-semibold">${product.price}</div>
+        <span class="mt-2 text-p text-center font-semibold">${carts.description}</span>
+        <div class="mt-1 text-p text-center font-semibold">${carts.price}</div>
         <div class="mt-2 flex items-center">
           <span class="w-8 h-8 text-center text-str bg-gray-100 rounded-full" data-incressqty><i class="fa-solid fa-plus fa-2xs" style="color: #46d61f;"></i></span>
           <span class="w-8 h-8 text-center text-str font-semibold">${carts.quantity}</span>
@@ -207,28 +226,69 @@ function addTocart() {
         </div>
         <div class="py-2">
         <span class="text-p font-medium">total</span>
-        <div class="text-p font-semibold">${product.price * carts.quantity}</div>
+        <div class="text-p font-semibold">${carts.price * carts.quantity}</div>
         </div>
         <div class="relative">
         <button type="button" class="w-6 h-6 text-center text-p text-red-500 hover:text-black bg-gray-200 rounded-full inline-flex items-center justify-center cursor-pointer hover:bg-red-500 absolute top-2 right-3" data-removecart><i class="fa-solid fa-xmark"></i></button>
         </div>
       `;
+      Total = Total + carts.price*carts.quantity;
+
       cproduct.appendChild(div);
       div.querySelector("[data-incressqty]").addEventListener("click", addQty);
       div.querySelector("[data-decressqty]").addEventListener("click", lessQty);
       div.querySelector("[data-removecart]").addEventListener("click", Deletecart);
     })
   }
+  
+  cartlength.innerText = cart.length;
+  cartTotal.innerHTML = Total;
+} 
+
+function getlocalstoredata() {
+  // get localstorage data
+  if (localStorage.getItem("cart")) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    addTocart();
+  }
 }
 
-function addQty(product_id) {
+function addQty() {
+  let tproduct = this.parentElement.parentElement.parentElement;
+  let tid = tproduct.dataset.id;
+  let Cartproduct = cart.findIndex((value) => value.product_id == tid);
+
+  if (Cartproduct >= 0) {
+    cart[Cartproduct].quantity = cart[Cartproduct].quantity + 1;
+  }
+    addTocart();
+    addtoLocalstorage();
   
 }
-function lessQty(product_id) {
-  
+function lessQty() {
+  let tproduct = this.parentElement.parentElement.parentElement;
+  let tid = tproduct.dataset.id;
+  let Cartproduct = cart.findIndex((value) => value.product_id == tid);
+
+  if (cart[Cartproduct].quantity >= 1) {
+    cart[Cartproduct].quantity = cart[Cartproduct].quantity - 1;
+  }
+  // if (cart[Cartproduct].quantity < 1) {
+  //   cart.slice(Cartproduct, 1);
+  // }
+  if (cart[Cartproduct].quantity == 0) {
+    cart = cart.filter((items)=> items.product_id !== tid)
+    // Deletecart();
+  }
+    addTocart();
+    addtoLocalstorage();
 }
-function Deletecart(product_id) {
-  
+function Deletecart() {
+  let tproduct = this.parentElement.parentElement;
+  let tid = tproduct.dataset.id;
+  cart = cart.filter((items) => items.product_id !== tid);
+    addTocart();
+    addtoLocalstorage();
 }
 
 menuclose.addEventListener("click", () => {
@@ -297,20 +357,90 @@ const slideRight = () => {
 
 const email = document.getElementById("Logemail");
 const password = document.getElementById("Logpassword");
+const signpassword = document.getElementById("Signpassword");
+const confirmpassword = document.getElementById("Confirmpassword");
 function UserLogin() {
   console.log(email.value, password.value);
 }
 
-function HideShowpass() {
-  const PassonOff = document.getElementById("[data-eyeicon]");
-  var x = document.getElementById("Logpassword");
-  if (x.type === "password") {
-    x.type = "text";
-    PassonOff.classList.add("fa-eye-slash");
-    PassonOff.classList.remove("fa-eye");
+const PassonOff = document.querySelector("[data-eyeicon]");
+function Hideshow() {
+  password.type = password.type === "password" ? "text" : "password";
+  signpassword.type = signpassword.type === "password" ? "text" : "password";
+  if (password.type === "password") {
+    PassonOff.innerHTML = `<i class="fa-solid fa-eye"></i>`;
   } else {
-    x.type = "password";
-    PassonOff.classList.add("fa-eye");
-    PassonOff.classList.remove("fa-eye-slash");
+    PassonOff.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
   }
 }
+const EyeonOff = document.querySelector("[data-eyeonoff]");
+function Hideshowc() {
+  confirmpassword.type = confirmpassword.type === "password" ? "text" : "password";
+  if (password.type === "password") {
+    EyeonOff.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+  } else {
+    EyeonOff.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+  }
+}
+
+const Esymbol = document.querySelector("[data-evalidmsg]");
+const Psymbol = document.querySelector("[data-pvalidmsg]");
+const emsg = document.getElementById("emsg");
+const Pmsg = document.getElementById("pmsg");
+// password.addEventListener("keyup", checkData);
+
+// function checkData() {
+//   let returndata = true;
+//   let passval = password.value;
+//   const lowercase = new RegExp('(?=.*[a-z])');
+//   const uppercase = new RegExp('(?=.*[A-Z])');
+//   const number = new RegExp('(?=.*[0-9])');
+//   const spcialchar = new RegExp('(?=.*[!@#\$%\^&\*])');
+//   const length = new RegExp('(?=.{6,})');
+
+// if (length.test(passval)) {
+//   Psymbol.innerHTML = `<i class="fa-regular fa-circle-check" style="color: #06a235;"></i>`;    
+// } else {
+//   Psymbol.innerHTML = `<i class="fa-regular fa-circle-xmark" style="color: #fb0404;"></i>`;
+//       Pmsg.classList.add("text-red-600");
+//       Pmsg.innerHTML = "password should be minium 6 character";
+//       returndata = false;
+// }
+
+//   if (lowercase.test(passval)) {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-check" style="color: #06a235;"></i>`;    
+//   } else {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-xmark" style="color: #fb0404;"></i>`;
+//     Pmsg.classList.add("text-red-600");
+//     Pmsg.innerHTML = "please Enter one lowercase";
+//     returndata = false;
+//   }
+
+//   if (uppercase.test(passval)) {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-check" style="color: #06a235;"></i>`;    
+//   } else {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-xmark" style="color: #fb0404;"></i>`;
+//     Pmsg.classList.add("text-red-600");
+//   Pmsg.innerHTML = "please Enter one uppercase ";
+//   returndata = false;
+//   }
+
+//   if (number.test(passval)) {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-check" style="color: #06a235;"></i>`;    
+//   } else {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-xmark" style="color: #fb0404;"></i>`;
+//     Pmsg.classList.add("text-red-600");
+//   Pmsg.innerHTML = "please Enter one number";
+//   returndata = false;
+//   }
+
+//   if (spcialchar.test(passval)) {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-check" style="color: #06a235;"></i>`;    
+//   } else {
+//     Psymbol.innerHTML = `<i class="fa-regular fa-circle-xmark" style="color: #fb0404;"></i>`;
+//     Pmsg.classList.add("text-red-600");
+//   Pmsg.innerHTML = "please Enter one spcial character";
+//   returndata = false;
+//   }
+//   return returndata;
+// }
